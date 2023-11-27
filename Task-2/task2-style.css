@@ -1,0 +1,128 @@
+/* Styling the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* styling the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 162, 255);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* styling the search bar in the header */
+.search-bar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* styling the search bar input inserted in the header */
+.search-bar input {
+    width: 20%;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* CSS for options in the header */
+.options ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.options li {
+    display: inline;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* styling the main tag */
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* styling the left side */
+.left-side {
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* styling the left side */
+.right-side {
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 18px;
+}
+
+/* Additional CSS for the movie frames*/
+.movie {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional CSS for the images*/
+.movie img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Additional CSS for the movie button*/
+.button {
+    background-color: rgb(0, 152, 240);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    float: right;
+}
+
+/* CSS for the side-B section */
+.side-B {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling the text */
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    color: rgb(109, 105, 105);
+}
+
+/* CSS for the Avengers section */
+.Avengers {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* CSS for the side section */
+.side {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+}
+
+/* CSS for the side-A section */
+.side-A {
+    display: flex;
+    justify-content: center;
+}
