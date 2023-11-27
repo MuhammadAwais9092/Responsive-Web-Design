@@ -1,0 +1,170 @@
+// Scss for Task 3
+// Using Scss for all the input that is supposed to be done on css file as per the requirements
+
+
+// setting the colors for Rectangles
+$rect-A-color: #4e89ae;
+$rect-B-color: #43658b;
+$rect-C-color: #ed6663;
+$rect-D-color: #ffa372;
+
+// setting the dimensions for Spheres
+$sphere-A-width: 70px;
+$sphere-A-height: 70px;
+$sphere-B-width: 80px;
+$sphere-B-height: 80px;
+$sphere-C-width: 90px;
+$sphere-C-height: 90px;
+$sphere-D-width: 100px;
+$sphere-D-height: 100px;
+
+// hover color for Spheres
+$sphere-hover-color: #444;
+
+// tag for height of the footer
+$footer-height: 50px;
+
+// Styling the body of the html
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(209, 219, 255);
+}
+
+// Using mixin for centering elements
+@mixin centerElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// USing mixin for setting image size
+@mixin image-size($url, $width, $height) {
+  background-image: url($url);
+  width: $width;
+  height: $height;
+}
+
+// Styling the Rectangles
+.Rectangles {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 4;
+}
+
+// Styling the Spheres
+.Spheres {
+  @include centerElement;
+  margin: 30px;
+  gap: 16px;
+}
+
+// Seperate styling for each Sphere
+#sphere-A {
+  width: $sphere-A-width;
+  height: $sphere-A-height;
+}
+
+#sphere-B {
+  width: $sphere-B-width;
+  height: $sphere-B-height;
+}
+
+#sphere-C {
+  width: $sphere-C-width;
+  height: $sphere-C-height;
+}
+
+#sphere-D {
+  width: $sphere-D-width;
+  height: $sphere-D-height;
+}
+
+// Styling for Rectangles and Spheres together
+#rect-A, #sphere-A {
+  background-color: $rect-A-color;
+}
+
+#rect-B, #sphere-B {
+  background-color: $rect-B-color;
+}
+
+#rect-C, #sphere-C {
+  background-color: $rect-C-color;
+}
+
+#rect-D, #sphere-D {
+  background-color: $rect-D-color;
+}
+
+// Styling the Spheres for additional properties
+.Spheres div {
+  border-radius: 50%;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Setting the height for Rectangles
+#rect-A, #rect-B, #rect-C, #rect-D {
+  height: 52px;
+}
+
+// Styling the header and the footer
+header, footer {
+  background-color: #8ccff7;
+}
+
+// Styling the hover effect on Rectangles and Spheres
+#rect-A:hover, #rect-B:hover, #rect-C:hover, #rect-D:hover,
+#sphere-A:hover, #sphere-B:hover, #sphere-C:hover, #sphere-D:hover {
+  background-color: $sphere-hover-color;
+  color: $sphere-hover-color;
+}
+
+// Styling the footer with defined height
+footer {
+  width: 100%;
+  height: $footer-height;
+  bottom: 0;
+}
+
+// Media query for screens larger than 800px
+@media (min-width: 801px) {
+  .Image-A {
+    @include image-size("https://via.placeholder.com/400", 400px, 400px);
+  }
+  .Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+}
+
+// Media query for screens between 480px and 800px
+@media (max-width: 800px) and (min-width: 481px) {
+  .Image-B {
+    @include image-size("https://via.placeholder.com/300", 300px, 300px);
+  }
+  .Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+  .Spheres {
+    flex-direction: column;
+  }
+}
+
+// Media query for screens less than 480px
+@media (max-width: 480px) {
+  .Image-C {
+    @include image-size("https://via.placeholder.com/200", 200px, 200px);
+  }
+  .Images {
+    background-color: #8ccff7;
+    @include centerElement;
+  }
+  .Spheres {
+    flex-direction: column;
+  }
+}
